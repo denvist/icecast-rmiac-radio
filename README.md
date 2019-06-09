@@ -1,6 +1,23 @@
 # Цель проекта
 
-Целью проекты являлась задача по созданию html-страницы для сервера радио-вещания Icecast, на которой пользователи могли бы прослушивать потоки.
+Целью проекты являлась задача по созданию html-страницы для сервера радио-вещания Icecast, на которой пользователи могли бы прослушивать потоки:
+
+![](screenshot.png)
+
+# Если всё и так устраивает
+
+Копируем содержимое папки ```public``` в ```/usr/share/icecast2/web```, там же создаем файл ```staions.json```, описывающего icecast source:
+
+```json
+[
+ {"title": "Source title 1", "url": "/source1.mp3"},
+ {"title": "Source title 2", "url": "/source2.mp3"},
+ {"title": "Source title 3", "url": "/source3.mp3"},
+ {"title": "Source title 4", "url": "/source4.mp3"}
+]
+```
+
+Открываем в браузере [ICECAST_IP:3000/index.html](http://localhost:3000/index.html)
 
 # Установка
 
