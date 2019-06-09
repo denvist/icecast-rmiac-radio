@@ -6,7 +6,7 @@
 
 # Если всё и так устраивает
 
-Копируем содержимое папки ```public``` в ```/usr/share/icecast2/web```, там же создаем файл ```staions.json```, описывающего icecast source:
+Копируем содержимое папки ```public``` в ```/usr/share/icecast2/web```, там же создаем файл ```stations.json```, описывающего icecast source:
 
 ```json
 [
@@ -17,7 +17,13 @@
 ]
 ```
 
-Открываем в браузере [ICECAST_IP:3000/index.html](http://localhost:3000/index.html)
+Открываем сервер icecast в браузере - [ICECAST_IP:3000/index.html](http://localhost:3000/index.html)
+
+При желании меняем в ```/etc/icecast2/icecast.xml``` дефолтовую страницу ```/``` на ```index.html```:
+
+```xml
+<alias source="/" destionation="/index.html" />
+```
 
 # Установка
 
